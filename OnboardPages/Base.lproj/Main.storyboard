@@ -55,7 +55,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pUW-Be-6DS">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUW-Be-6DS">
                                 <rect key="frame" x="0.0" y="20" width="375" height="547"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLs-ph-GmW">
@@ -71,6 +71,9 @@
                                     <constraint firstItem="FLs-ph-GmW" firstAttribute="leading" secondItem="pUW-Be-6DS" secondAttribute="leading" id="bKV-OG-55b"/>
                                     <constraint firstAttribute="bottom" secondItem="FLs-ph-GmW" secondAttribute="bottom" id="ewL-jw-Ei7"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="zfe-zB-DH1" id="Lhu-Nl-49M"/>
+                                </connections>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="f1E-95-v5E">
                                 <rect key="frame" x="168" y="582" width="39" height="37"/>

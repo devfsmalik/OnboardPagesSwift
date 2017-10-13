@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WOnboardPages: UIViewController {
+class WOnboardPages: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var m_pageControl: UIPageControl!
     @IBOutlet weak var m_scrollView: UIScrollView!
@@ -99,8 +99,8 @@ class WOnboardPages: UIViewController {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {  // here if want to do something on pagescroll
         
-//        let pageNumber = round(m_scrollView.contentOffset.x / m_scrollView.frame.size.width)
-//        m_pageControl.currentPage = Int(pageNumber)
+        let pageNumber = round(m_scrollView.contentOffset.x / m_scrollView.frame.size.width)
+        m_pageControl.currentPage = Int(pageNumber)
 //        if (pageNumber == 2)
 //        {
 //            UIView.animate(withDuration: 0.2) {
